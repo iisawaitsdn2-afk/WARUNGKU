@@ -84,6 +84,13 @@ aside .box{padding:0}
 .emo{width:42px;height:42px;font-size:22px;border-radius:8px;border:1px solid var(--line);background:var(--card);cursor:pointer;padding:0}
 .emo.on{border-color:var(--blue);background:#132a52}
 </style>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#1677ff">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Warungku">
 </head>
 <body>
 <header>
@@ -342,6 +349,7 @@ $("alt").onclick=async e=>{
   }catch(err){b.disabled=false;toast(gagalMsg(err),1)}
 };
 renderItems();renderHist();renderConn();renderStat();loadUtang();
+if("serviceWorker" in navigator&&/^https?:/.test(location.protocol))navigator.serviceWorker.register("sw.js").catch(()=>{});
 </script>
 </body>
 </html>
