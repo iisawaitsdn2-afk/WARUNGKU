@@ -10,7 +10,7 @@
 body{font-family:"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--tx);font-size:14px}
 header{display:flex;justify-content:space-between;align-items:center;padding:14px 26px;border-bottom:1px solid var(--line)}
 .brand{display:flex;gap:14px;align-items:center}
-.logo{width:50px;height:50px;border-radius:12px;background:var(--blue);display:grid;place-items:center;font-size:26px}
+.logo{width:50px;height:50px;border-radius:12px;object-fit:cover;display:block;flex:0 0 50px;background:transparent}
 .brand h1{font-size:24px;letter-spacing:.5px}.brand p{color:var(--mut)}
 .hr{display:flex;gap:18px;align-items:center}
 .pill{padding:8px 14px;border-radius:20px;border:1px solid #14633f;background:#0a2a22;color:#3fe0a0}
@@ -94,7 +94,7 @@ aside .box{padding:0}
 </head>
 <body>
 <header>
-  <div class="brand"><div class="logo">🏪</div><div><h1>WARUNGKU</h1><p>Mudah · Cepat · Terpercaya</p></div></div>
+  <div class="brand"><img class="logo" src="icon-192.png" alt="Logo WARUNGKU"><div><h1>WARUNGKU</h1><p>Mudah · Cepat · Terpercaya</p></div></div>
   <div class="hr"><span class="pill off" id="conn">● Belum terhubung</span><button class="ghost" id="set">⚙ Pengaturan</button></div>
 </header>
 <div class="layout">
