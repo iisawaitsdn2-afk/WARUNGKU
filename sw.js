@@ -1,8 +1,8 @@
 // Service worker Warungku: halaman tetap bisa dibuka tanpa internet.
 // Online -> ambil versi terbaru; offline -> pakai salinan tersimpan.
 // Permintaan ke Google (Apps Script) tidak disentuh sama sekali.
-const CACHE = "warungku-v2";
-const ASSETS = ["./", "./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png"];
+const CACHE = "warungku-v3-icons";
+const ASSETS = ["./", "./index.html", "./manifest.webmanifest", "./files/icon-192.png", "./files/icon-512.png", "./files/icon-maskable-512.png"];
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));
